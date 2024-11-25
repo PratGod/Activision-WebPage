@@ -1,0 +1,143 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #000;
+    overflow-x: hidden;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111;
+    padding: 10px 20px;
+    height: 60px;
+}
+
+.navbar .logo img {
+    height: 40px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f90;
+}
+
+.auth-buttons .btn {
+    border-radius: 8px;
+    padding: 8px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: 0.3s ease;
+}
+
+.auth-buttons .btn:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #111;
+}
+
+/* Featured Games Banner */
+#featured-banner {
+    position: relative;
+    text-align: center;
+    overflow: hidden; 
+}
+
+#featured-banner img {
+    width: 100%;
+    height: auto;
+    max-height: 600px; 
+    display: block;
+    object-fit: cover; 
+}
+
+#featured-banner h1 {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* Game Section */
+#featured-games {
+    padding: 20px 0;
+    background-color: #000;
+}
+
+.games-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 90%;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+.game-card {
+    width: calc(33.33% - 30px);
+    height: 250px; 
+    margin: 0 0 20px 0;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #222;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.game-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.game-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(255, 255, 255, 0.3);
+}
+
+.game-card:hover img {
+    transform: scale(1.1);
+}
+
+/* Margins for Game Layout */
+.games-container > div:nth-child(1),
+.games-container > div:nth-child(4) {
+    margin-left: 25px;
+}
+
+.games-container > div:nth-child(3),
+.games-container > div:nth-child(6) {
+    margin-right: 25px;
+}
